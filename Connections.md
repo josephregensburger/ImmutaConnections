@@ -16,4 +16,4 @@ In order to connect to the Immuta datastore, we must first identify the connecti
 
 Sign into the Immuta Console, shown below
 
-![Immuta Console](Screen Shot 2017-04-06 at 11.22.54 AM.png)
+![Immuta Console](ImmutaFrontScreen.png)
