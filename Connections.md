@@ -52,14 +52,14 @@ higher-level statement construction, connection-management, execution,
 import sqlalchemy as sq
 import psycopg2 as pg
 import getpass
-user_name = 'joe'
+user_name = 'joe' # Enter your username here
 host_name = 'db.innovation.immuta.limited'
 port_number = 5432
 db_name = 'immuta'
-password = getpass.getpass()
 
 def MakeConnectionString(user_name, host_name,
-                         port_number, password, db_name):
+                         port_number, db_name):
+    password = getpass.getpass()
     connection_string = "postgresql://%s:%s@%s:%i/%s?sslmode=require"%(user_name,
                                                                       password,
                                                                       host_name,
@@ -68,6 +68,35 @@ def MakeConnectionString(user_name, host_name,
     return(connection_string)
 
 engine = sq.create_engine(MakeConnectionString(user_name, host_name, port_number,
-                                              password, db_name))
-del(password)
- ```
+                                              db_name))
+```
+4. You can now examine the tables which have been exposed to you using the
+SQLAlchemy inspector object:
+
+```
+inspector = sq.inspect(engine)
+## Look at the available source tables
+inspector.get_foreign_table_names()
+```
+
+The list of tables returned from the ``get_foreign_table_names``
+will match the list of tables which are exposed to you in Immuta.
+
+5. Read a table into a Pandas data frame.  This can be done
+several ways but here are a few methods:
+
+```
+# create a connection
+conn = engine.connect()
+
+# Query the table through Pandas
+df_pandas = pd.read_sql("SELECT * FROM credit_card_merged_data", conn)
+
+# Use SQLAlchemy to query the table directory and fold
+# the results into pandas
+query = conn.execute('SELECT * FROM credit_card_merged_data')
+df_sql = pd.DataFrame(query.fetchall(), columns=query.keys())
+
+# Close the connection
+conn.close()
+```
