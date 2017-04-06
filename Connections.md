@@ -48,7 +48,7 @@ higher-level statement construction, connection-management, execution,
  and result contexts.  The following code can be used to
  create the SQLAlchemy Engine:
 
- `
+ ```
 import sqlalchemy as sq
 import psycopg2 as pg
 import getpass
@@ -70,4 +70,4 @@ def MakeConnectionString(user_name, host_name,
 engine = sq.create_engine(MakeConnectionString(user_name, host_name, port_number,
                                               password, db_name))
 del(password)
- `
+ ```
