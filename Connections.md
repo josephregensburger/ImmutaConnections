@@ -14,6 +14,10 @@ In principle any tool which can connect to a PostgreSQL database can access the 
 ## Getting Started
 In order to connect to the Immuta datastore, we must first identify the connection string.
 
-Sign into the Immuta Console, shown below
-
+1. Sign into the Immuta Console, shown below
 ![Immuta Console](ImmutaFrontScreen.png)
+
+2. Select your initials on the upper left hand corner of the GUI
+
+3. Select **SQL Credentials***
+![SQL Credentials](SQLCredentials.png)
