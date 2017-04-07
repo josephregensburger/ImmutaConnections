@@ -28,7 +28,7 @@ In order to connect to the Immuta datastore, we must first identify the connecti
 
 Now we have the basic connection information needed to connect to a tool.
 
-## Python 3.x Using SQLAlchemy and Pandas Dataframes
+## Python 32.7 and .x Using SQLAlchemy and Pandas Dataframes
 
 **SQLAlchemy** is the Python SQL toolkit to connect and query SQL databases.  This package
 will form the primary interface to query the source data.  **Psycopg2** is a popular
@@ -41,7 +41,7 @@ Connecting to the Immuta data store will require installing all of these package
 
 `pip install sqlalchemy psycopg2 pandas`
 
-2. Now launch python 3.x
+2. Now launch python 2.7 or 3.x
 3. We now need to create an SQLAlchemy Engine.  The engine package
 defines the basic components used to interface DB-API modules with
 higher-level statement construction, connection-management, execution,
@@ -100,3 +100,29 @@ df_sql = pd.DataFrame(query.fetchall(), columns=query.keys())
 # Close the connection
 conn.close()
 ```
+## RStudio
+
+Good luck
+
+## Tableau
+
+Tableau can query the Immuta data store using the **Connect** menu.  
+Under the **To a Server** menu select **PostgreSQL**.  This launch
+a menu, shown below, to enter the Immuta server, port, database, user
+name and password.  Please make sure to check **Require SSL**.
+
+![Tableau PostgreSQL Connection](TableauPostgres.png)
+
+After connecting to Immuta, Tableau will present a list of available
+data sources from the Immuta data store.
+
+![Available Immuta Tables](TableauTables.png)
+
+Select any of the available tables and drag them into the
+**Drag tables here** frame.  From here it is possible to join tables,
+filter rows, and define selections.  Once you have a defined
+table select **Update Now**.  This will draw data from Immuta.  
+
+Additional information on connecting Tableau and Immuta can
+be found here,
+[Tableau PostgreSQL](http://onlinehelp.tableau.com/current/pro/desktop/en-us/examples_postgresql.html) 
