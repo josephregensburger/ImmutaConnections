@@ -28,7 +28,7 @@ In order to connect to the Immuta datastore, we must first identify the connecti
 
 Now we have the basic connection information needed to connect to a tool.
 
-## Python 32.7 and .x Using SQLAlchemy and Pandas Dataframes
+## Python 2.7 and 3.x Using SQLAlchemy and Pandas Dataframes
 
 **SQLAlchemy** is the Python SQL toolkit to connect and query SQL databases.  This package
 will form the primary interface to query the source data.  **Psycopg2** is a popular
@@ -129,8 +129,8 @@ be found here,
 
 ## RapidMiner
 
-RapidMiner database connections are detailed here: [RapidMiner Database]
-(http://docs.rapidminer.com/server/administration/creating-connections/creating-db-conns.html).  
+RapidMiner database connections are detailed here:
+[RapidMiner Database](http://docs.rapidminer.com/server/administration/creating-connections/creating-db-conns.html).  
 In this be sure to set **SSL Mode** to **require**.  This can be done
 under the **Advanced** connection properties tab, shown below.  Find the
 **sslmode** key and set the value to **require**, as well as checking
@@ -141,6 +141,7 @@ make sure the connection is ok.
 
 Select **Database** under the **Data Access** tab in the **Operators**
 menu.  Drag the **Read Database** operator into the process screen.  
+
 Select the **Read Database** operator in the **Process** frame,
 this will the **Parameters** tab for the database.  In the
 **Parameters** frame select the Immuta connection.  It is
