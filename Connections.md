@@ -137,7 +137,7 @@ under the **Advanced** connection properties tab, shown below.  Find the
 the **Override** column.  Once this is done, select **Test** to
 make sure the connection is ok.
 
-[RapidMiner Advanced Connection Properties](RapidMinerAdvanced.png)
+![RapidMiner Advanced Connection Properties](RapidMinerAdvanced.png)
 
 Select **Database** under the **Data Access** tab in the **Operators**
 menu.  Drag the **Read Database** operator into the process screen.  
@@ -150,4 +150,4 @@ RapidMiner does not appear to prepopulate the complete list
 of Immuta Tables.  That being said it is possible to just enter
 the Immuta table name and have RapidMiner ingest the data.
 
-[RapidMiner Read Database Parameters](RapidMinerParameters.png)
+![RapidMiner Read Database Parameters](RapidMinerParameters.png)
