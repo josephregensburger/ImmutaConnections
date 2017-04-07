@@ -111,12 +111,12 @@ Under the **To a Server** menu select **PostgreSQL**.  This launch
 a menu, shown below, to enter the Immuta server, port, database, user
 name and password.  Please make sure to check **Require SSL**.
 
-![Tableau PostgreSQL Connection](TableauPostgres.png)
+![Tableau PostgreSQL Connection](Tableau_Postgres.png)
 
 After connecting to Immuta, Tableau will present a list of available
 data sources from the Immuta data store.
 
-![Available Immuta Tables](TableauTables.png)
+![Available Immuta Tables](Tableau_Tables.png)
 
 Select any of the available tables and drag them into the
 **Drag tables here** frame.  From here it is possible to join tables,
@@ -125,4 +125,4 @@ table select **Update Now**.  This will draw data from Immuta.
 
 Additional information on connecting Tableau and Immuta can
 be found here,
-[Tableau PostgreSQL](http://onlinehelp.tableau.com/current/pro/desktop/en-us/examples_postgresql.html) 
+[Tableau PostgreSQL](http://onlinehelp.tableau.com/current/pro/desktop/en-us/examples_postgresql.html)
