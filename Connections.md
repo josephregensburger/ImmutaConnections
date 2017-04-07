@@ -126,3 +126,27 @@ table select **Update Now**.  This will draw data from Immuta.
 Additional information on connecting Tableau and Immuta can
 be found here,
 [Tableau PostgreSQL](http://onlinehelp.tableau.com/current/pro/desktop/en-us/examples_postgresql.html)
+
+## RapidMiner
+
+RapidMiner database connections are detailed here: [RapidMiner Database]
+(http://docs.rapidminer.com/server/administration/creating-connections/creating-db-conns.html).  
+In this be sure to set **SSL Mode** to **require**.  This can be done
+under the **Advanced** connection properties tab, shown below.  Find the
+**sslmode** key and set the value to **require**, as well as checking
+the **Override** column.  Once this is done, select **Test** to
+make sure the connection is ok.
+
+[RapidMiner Advanced Connection Properties](RapidMinerAdvanced.png)
+
+Select **Database** under the **Data Access** tab in the **Operators**
+menu.  Drag the **Read Database** operator into the process screen.  
+Select the **Read Database** operator in the **Process** frame,
+this will the **Parameters** tab for the database.  In the
+**Parameters** frame select the Immuta connection.  It is
+then possible to query the database or select a table, however
+RapidMiner does not appear to prepopulate the complete list
+of Immuta Tables.  That being said it is possible to just enter
+the Immuta table name and have RapidMiner ingest the data.
+
+[RapidMiner Read Database Parameters](RapidMinerParameters.png)
