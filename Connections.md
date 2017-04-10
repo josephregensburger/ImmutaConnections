@@ -100,10 +100,70 @@ df_sql = pd.DataFrame(query.fetchall(), columns=query.keys())
 # Close the connection
 conn.close()
 ```
-## RStudio
+## R and RStudio
 
-Good luck
+As with Python, R has libraries to interface with a PostgreSQL data source.  
+These libraries include **RODBC** and **RPostgeSQL**.  This document will
+detail how **RODBC** can be used to connect to Immuta data sources.
 
+Prior to installing **RODBC**, Postgres ODBC Drivers must be installed on
+your system, and ODBC datasources must be setup.  There are step by step
+guides on doing this in Windows (![Windows Instructions](https://cran.r-project.org/web/packages/RODBC/vignettes/RODBC.pdf))
+and Mac (![Mac Instructions](http://hiltmon.com/blog/2013/09/18/setup-odbc-for-r-on-os-x/)).
+
+Once installed the **odbc.ini** file will need to be edited to
+enable connections to Immuta.  This can be done either globally
+at **/usr/local/etc/odbc.ini** or locally at **~/odbc.ini**.  Add
+the Immuta connection to the **odbc.ini** file by adding the following
+passage:
+
+```
+[ODBC Data Sources]
+immuta = Immuta Innovation
+local = Local Postgres
+
+[immuta]
+Driver = PostgreSQL
+ServerName = <immuta server name>
+Port = 5432
+Database = immuta
+Username = <your user name>
+Password = <your password>
+Protocol = 9.5
+Debug = 1
+SSLMode = require
+```
+
+The Immuta server name and your Immuta user name can be seen in
+the SQL Credential screen discussed in the **Getting Started** section.
+
+Once this is edited install **RODBC** using the following command
+from the command line:
+
+```
+$ R CMD INSTALL RODBC_1.3-8.tar.gz
+```
+
+Now launch either **R** or **RStudio** and execute the following
+commands:
+
+```
+library("RODBC")
+odbcDataSources()
+```
+
+This should show "immuta" as an available datasource.  
+
+```
+# Open a connection to Immuta
+ch <- odbcConnect("immuta")
+## Show available tables
+sqlTables(ch)
+## Fetch a table
+df <- sqlFetch(ch, <table name>, max=100)
+## Close the connection
+close(ch)
+```
 ## Tableau
 
 Tableau can query the Immuta data store using the **Connect** menu.  
@@ -125,7 +185,7 @@ table select **Update Now**.  This will draw data from Immuta.
 
 Additional information on connecting Tableau and Immuta can
 be found here,
-[Tableau PostgreSQL](http://onlinehelp.tableau.com/current/pro/desktop/en-us/examples_postgresql.html)
+![Tableau PostgreSQL](http://onlinehelp.tableau.com/current/pro/desktop/en-us/examples_postgresql.html)
 
 ## RapidMiner
 
@@ -151,3 +211,15 @@ of Immuta Tables.  That being said it is possible to just enter
 the Immuta table name and have RapidMiner ingest the data.
 
 ![RapidMiner Read Database Parameters](RapidMinerParameters.png)
+
+## TODO: GOOGLE SHEETS w/ KLOUDIO
+
+## TODO: GOOGLE SHEETS w/ ZAPIER
+
+## TODO: EXCEL
+
+## TODO: MATLAB
+
+## TODO: STATA
+
+## TODO: SAS
