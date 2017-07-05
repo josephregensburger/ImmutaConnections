@@ -1,4 +1,6 @@
 # UMD Canvas Immuta Integration
+Immuta  
+July 6, 2017  
 
 
 
@@ -86,16 +88,14 @@ ON c.enrollment_term_id=t.id
 ```
 
 
-Table: Course Detail Table
-
-course_name                                                         code      course_workflow_state   term_name     root_account             parent_account   subaccount1   subaccount2    
-------------------------------------------------------------------  --------  ----------------------  ------------  -----------------------  ---------------  ------------  ---------------
-FMSC899-1501: Doctoral Dissertation Research-Spring 2014 eanders    FMSC899   deleted                 Spring 2014   University of Maryland   Family Science   SPHL          Family Science 
-FMSC789-1101: Non-Thesis Research-Spring 2014 rzeiger               FMSC789   deleted                 Spring 2014   University of Maryland   Family Science   SPHL          Family Science 
-FMSC898-1801: Pre-Candidacy Research-Spring 2014 kroy               FMSC898   deleted                 Spring 2014   University of Maryland   Family Science   SPHL          Family Science 
-FMSC699-0301: Independent Study-Spring 2014 lleslie                 FMSC699   deleted                 Spring 2014   University of Maryland   Family Science   SPHL          Family Science 
-FMSC899-1901: Doctoral Dissertation Research-Spring 2014 shenassa   FMSC899   available               Spring 2014   University of Maryland   Family Science   SPHL          Family Science 
-FMSC699-1601: Independent Study-Spring 2014 bbraun                  FMSC699   deleted                 Spring 2014   University of Maryland   Family Science   SPHL          Family Science 
+|course_name                                                       |code    |course_workflow_state |term_name   |root_account           |parent_account |subaccount1 |subaccount2    |
+|:-----------------------------------------------------------------|:-------|:---------------------|:-----------|:----------------------|:--------------|:-----------|:--------------|
+|FMSC899-1501: Doctoral Dissertation Research-Spring 2014 eanders  |FMSC899 |deleted               |Spring 2014 |University of Maryland |Family Science |SPHL        |Family Science |
+|FMSC789-1101: Non-Thesis Research-Spring 2014 rzeiger             |FMSC789 |deleted               |Spring 2014 |University of Maryland |Family Science |SPHL        |Family Science |
+|FMSC898-1801: Pre-Candidacy Research-Spring 2014 kroy             |FMSC898 |deleted               |Spring 2014 |University of Maryland |Family Science |SPHL        |Family Science |
+|FMSC699-0301: Independent Study-Spring 2014 lleslie               |FMSC699 |deleted               |Spring 2014 |University of Maryland |Family Science |SPHL        |Family Science |
+|FMSC899-1901: Doctoral Dissertation Research-Spring 2014 shenassa |FMSC899 |available             |Spring 2014 |University of Maryland |Family Science |SPHL        |Family Science |
+|FMSC699-1601: Independent Study-Spring 2014 bbraun                |FMSC699 |deleted               |Spring 2014 |University of Maryland |Family Science |SPHL        |Family Science |
 
 A detailed course section table can be built from the above query using the following 
 SQL statement:
@@ -131,16 +131,14 @@ ON cs.course_id = ct.id
 ```
 
 
-Table: Partial Course Detail Table
-
-course_section_name                                                                                                                        course_name                                                                                                                                code            course_workflow_state   term_name      root_account             parent_account                                   subaccount1   subaccount2                                    
------------------------------------------------------------------------------------------------------------------------------------------  -----------------------------------------------------------------------------------------------------------------------------------------  --------------  ----------------------  -------------  -----------------------  -----------------------------------------------  ------------  -----------------------------------------------
-HIST408G-0101: Senior Seminar; The Environmental History of Eurasia-Fall 2017 scameron                                                     HIST408G-0101: Senior Seminar; The Environmental History of Eurasia-Fall 2017 scameron                                                     HIST408G        claimed                 Fall 2017      University of Maryland   History                                          ARHU          History                                        
-GVPT729A-0101: Special Topics in Quantitative Political Analysis; Advanced Maximum Likelihood Estimation-Fall 2017 mhanmer                 GVPT729A-0101: Special Topics in Quantitative Political Analysis; Advanced Maximum Likelihood Estimation-Fall 2017 mhanmer                 GVPT729A        claimed                 Fall 2017      University of Maryland   Government & Politics                            BSOS          Government & Politics                          
-PSYC318D-0101/WMST498A-0101: Community Interventions: Theory and Research; Community Interventions: Domestic Violence-Fall 2017 kmobrien   PSYC318D-0101/WMST498A-0101: Community Interventions: Theory and Research; Community Interventions: Domestic Violence-Fall 2017 kmobrien   PSYC318D        claimed                 Fall 2017      University of Maryland   Psychology                                       BSOS          Psychology                                     
-SPAN415-0101: Commercial Spanish II-Fall 2017 fabian                                                                                       SPAN415-0101: Commercial Spanish II-Fall 2017 fabian                                                                                       SPAN415         claimed                 Fall 2017      University of Maryland   School of Languages, Literatures, and Cultures   ARHU          School of Languages, Literatures, and Cultures 
-Summer 2017 LSAMP Undergraduate Research Program                                                                                           Summer 2017 LSAMP Undergraduate Research Program                                                                                           Summer2017URP   available               Default Term   University of Maryland   ENGR                                             ENGR          Organizations-ENGR                             
-KNES360-0201,0202,0203,0204,0205,0206: Physiology of Exercise-Fall 2017 rlindle                                                            KNES360-0201,0202,0203,0204,0205,0206: Physiology of Exercise-Fall 2017 rlindle                                                            KNES360         claimed                 Fall 2017      University of Maryland   Kinesiology                                      SPHL          Kinesiology                                    
+|course_section_name                                                                                                                      |course_name                                                                                                                              |code          |course_workflow_state |term_name    |root_account           |parent_account                                 |subaccount1 |subaccount2                                    |
+|:----------------------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------|:-------------|:---------------------|:------------|:----------------------|:----------------------------------------------|:-----------|:----------------------------------------------|
+|HIST408G-0101: Senior Seminar; The Environmental History of Eurasia-Fall 2017 scameron                                                   |HIST408G-0101: Senior Seminar; The Environmental History of Eurasia-Fall 2017 scameron                                                   |HIST408G      |claimed               |Fall 2017    |University of Maryland |History                                        |ARHU        |History                                        |
+|GVPT729A-0101: Special Topics in Quantitative Political Analysis; Advanced Maximum Likelihood Estimation-Fall 2017 mhanmer               |GVPT729A-0101: Special Topics in Quantitative Political Analysis; Advanced Maximum Likelihood Estimation-Fall 2017 mhanmer               |GVPT729A      |claimed               |Fall 2017    |University of Maryland |Government & Politics                          |BSOS        |Government & Politics                          |
+|PSYC318D-0101/WMST498A-0101: Community Interventions: Theory and Research; Community Interventions: Domestic Violence-Fall 2017 kmobrien |PSYC318D-0101/WMST498A-0101: Community Interventions: Theory and Research; Community Interventions: Domestic Violence-Fall 2017 kmobrien |PSYC318D      |claimed               |Fall 2017    |University of Maryland |Psychology                                     |BSOS        |Psychology                                     |
+|SPAN415-0101: Commercial Spanish II-Fall 2017 fabian                                                                                     |SPAN415-0101: Commercial Spanish II-Fall 2017 fabian                                                                                     |SPAN415       |claimed               |Fall 2017    |University of Maryland |School of Languages, Literatures, and Cultures |ARHU        |School of Languages, Literatures, and Cultures |
+|Summer 2017 LSAMP Undergraduate Research Program                                                                                         |Summer 2017 LSAMP Undergraduate Research Program                                                                                         |Summer2017URP |available             |Default Term |University of Maryland |ENGR                                           |ENGR        |Organizations-ENGR                             |
+|KNES360-0201,0202,0203,0204,0205,0206: Physiology of Exercise-Fall 2017 rlindle                                                          |KNES360-0201,0202,0203,0204,0205,0206: Physiology of Exercise-Fall 2017 rlindle                                                          |KNES360       |claimed               |Fall 2017    |University of Maryland |Kinesiology                                    |SPHL        |Kinesiology                                    |
 
 ## Enrollment Datasources
 
@@ -164,16 +162,14 @@ ON e.role_id = r.id
 
 
 
-Table: Partial Enrollment Detail Table
-
-user_id               course_section_id   course_id           type                enrollment_workflow_state   created_at                updated_at                sub_role_name     
---------------------  ------------------  ------------------  ------------------  --------------------------  ------------------------  ------------------------  ------------------
-244654844961525305    11330000001557796   11330000001227361   StudentEnrollment   deleted                     2017-04-17 22:22:44.404   2017-05-06 12:33:04.47    StudentEnrollment 
-497117251635255794    11330000001557796   11330000001227361   StudentEnrollment   deleted                     2017-04-19 22:22:44.061   2017-05-06 12:33:04.422   StudentEnrollment 
--509236400883090242   11330000001557796   11330000001227361   StudentEnrollment   deleted                     2017-04-20 16:24:04.501   2017-05-06 12:33:03.923   StudentEnrollment 
--1092152539084524     11330000001557796   11330000001227361   StudentEnrollment   deleted                     2017-04-23 00:24:03.232   2017-05-06 12:31:41.417   StudentEnrollment 
-547152121835594887    11330000001557796   11330000001227361   StudentEnrollment   deleted                     2017-04-23 00:24:03.376   2017-05-06 12:33:04.715   StudentEnrollment 
-332078304411371458    11330000001557792   11330000001227361   StudentEnrollment   deleted                     2017-05-23 00:33:02.471   2017-05-27 22:32:40.808   StudentEnrollment 
+|user_id             |course_section_id |course_id         |type              |enrollment_workflow_state |created_at              |updated_at              |sub_role_name     |
+|:-------------------|:-----------------|:-----------------|:-----------------|:-------------------------|:-----------------------|:-----------------------|:-----------------|
+|244654844961525305  |11330000001557796 |11330000001227361 |StudentEnrollment |deleted                   |2017-04-17 22:22:44.404 |2017-05-06 12:33:04.47  |StudentEnrollment |
+|497117251635255794  |11330000001557796 |11330000001227361 |StudentEnrollment |deleted                   |2017-04-19 22:22:44.061 |2017-05-06 12:33:04.422 |StudentEnrollment |
+|-509236400883090242 |11330000001557796 |11330000001227361 |StudentEnrollment |deleted                   |2017-04-20 16:24:04.501 |2017-05-06 12:33:03.923 |StudentEnrollment |
+|-1092152539084524   |11330000001557796 |11330000001227361 |StudentEnrollment |deleted                   |2017-04-23 00:24:03.232 |2017-05-06 12:31:41.417 |StudentEnrollment |
+|547152121835594887  |11330000001557796 |11330000001227361 |StudentEnrollment |deleted                   |2017-04-23 00:24:03.376 |2017-05-06 12:33:04.715 |StudentEnrollment |
+|332078304411371458  |11330000001557792 |11330000001227361 |StudentEnrollment |deleted                   |2017-05-23 00:33:02.471 |2017-05-27 22:32:40.808 |StudentEnrollment |
 
 ### Wiki and Wiki Page Tables
 
@@ -193,16 +189,14 @@ WHERE parent_type = 'Course';
 ```
 
 
-Table: Partial Wiki Detail Table
-
-id                  parent_type   title                                                                                                front_page_url    
-------------------  ------------  ---------------------------------------------------------------------------------------------------  ------------------
-11330000000525474   Course        CCJS331-SG91: Contemporary Legal Policy Issues-Fall 2017 adrew12 Wiki                                NA                
-11330000000528418   Course        Dr. Zeng Wiki                                                                                        home-page         
-11330000000523994   Course        COMM400-0201: Research Methods in Communication-Fall 2017 sobae Wiki                                 NA                
-11330000000526938   Course        LBSC602-SG10: Serving Information Needs-Summer I 2017 rgammons Wiki                                  table-of-contents 
-11330000000528794   Course        BSST399T-0101: Individual Study in Terrorism Studies; Teaching Terrorism-Spring 2017 kworboys Wiki   NA                
-11330000000523869   Course        BERC601-PLR1: White-Collar Crime and Victimization-Fall 2017 dmaimon Wiki                            home-page         
+|id                |parent_type |title                                                                                              |front_page_url    |
+|:-----------------|:-----------|:--------------------------------------------------------------------------------------------------|:-----------------|
+|11330000000525474 |Course      |CCJS331-SG91: Contemporary Legal Policy Issues-Fall 2017 adrew12 Wiki                              |NA                |
+|11330000000528418 |Course      |Dr. Zeng Wiki                                                                                      |home-page         |
+|11330000000523994 |Course      |COMM400-0201: Research Methods in Communication-Fall 2017 sobae Wiki                               |NA                |
+|11330000000526938 |Course      |LBSC602-SG10: Serving Information Needs-Summer I 2017 rgammons Wiki                                |table-of-contents |
+|11330000000528794 |Course      |BSST399T-0101: Individual Study in Terrorism Studies; Teaching Terrorism-Spring 2017 kworboys Wiki |NA                |
+|11330000000523869 |Course      |BERC601-PLR1: White-Collar Crime and Victimization-Fall 2017 dmaimon Wiki                          |home-page         |
 
 If the *Group* wikis need to added at a later date they can be created within the following
 SQL statement:
@@ -230,16 +224,14 @@ WHERE wiki_id IN (SELECT id FROM wiki_dim WHERE parent_type = 'Course')
 ```
 
 
-Table: Partial Wiki Detail Table
-
-id                  title                                                                                                    url                                                                                                view_count
-------------------  -------------------------------------------------------------------------------------------------------  ------------------------------------------------------------------------------------------------  -----------
-11330000002149475   Choosing the Comparable Unit for Complex Processes Video                                                 choosing-the-comparable-unit-for-complex-processes-video                                                   29
-11330000002149469   Module 3 Overview                                                                                        module-3-overview                                                                                         268
-11330000002149460   Help Desk, Academic, and Library Support                                                                 help-desk-academic-and-library-support                                                                      1
-11330000002140393   Group Members: Redab Alnifaidy, Patty Powers, Amanda Harrilal, Harish Jairam  Topic: Cushing's Disease   group-members-redab-alnifaidy-patty-powers-amanda-harrilal-harish-jairam-topic-cushings-disease           213
-11330000002155332   Newspapers                                                                                               newspapers                                                                                                  0
-11330000002150071   Week 4 (9/21 & 9/23)                                                                                     week-4-9-slash-21-and-9-slash-23                                                                          823
+|id                |title                                        |url                                         | view_count|
+|:-----------------|:--------------------------------------------|:-------------------------------------------|----------:|
+|11330000002088192 |Exercise Gathering Career Info Activity      |exercise-gathering-career-info-activity     |          5|
+|11330000002077219 |Home                                         |home                                        |        505|
+|11330000002052278 |Links for class                              |links-for-class                             |          1|
+|11330000002064153 |Assignment: Current Issues in Macroeconomics |assignment-current-issues-in-macroeconomics |        158|
+|11330000002063013 |Resources for Economics Coverage and Policy  |resources-for-economics-coverage-and-policy |          3|
+|11330000002080118 |Lecture 4 - Notes                            |lecture-4-notes                             |         20|
 
 The **file_dim** contains attributes for reference files.  
 This table contains keys to link the files to courses, quizzes, and assignments.
@@ -260,16 +252,14 @@ LEFT JOIN assignment_rule_dim
 ON id=assignment_id
 ```
 
-Table: Partial Assignment Detail Table
-
-id                  course_id           title                                        points_possible   workflow_state    position
-------------------  ------------------  -------------------------------------------  ----------------  ---------------  ---------
-11330000004087414   11330000001178073   Final Project Site Dance Study               0                 deleted                 14
-11330000004070419   11330000001191641   Correction 2/22                              5                 unpublished              9
-11330000004070483   11330000001191641   Independent listening 3                      10                unpublished              3
-11330000004070491   11330000001191641   P WK 3                                       5                 unpublished              3
-11330000004075624   11330000001191720   Supply chain and distribution channel plan   3                 published                8
-11330000004130263   11330000001182347   Empathy Round 2—Empathy Plan                 5                 published                3
+|id                |course_id         |title                                    |points_possible |workflow_state | position|
+|:-----------------|:-----------------|:----------------------------------------|:---------------|:--------------|--------:|
+|11330000004031507 |11330000001179220 |Reading #7: Land Treatment and Bioswales |0               |published      |        7|
+|11330000004058621 |11330000001175160 |Exam 3                                   |150             |published      |        4|
+|11330000004058627 |11330000001175160 |report                                   |50              |published      |        7|
+|11330000004023545 |11330000001190682 |Library Day 1                            |20              |published      |       10|
+|11330000004023541 |11330000001190682 |Final Exam Study Guide                   |NA              |unpublished    |        1|
+|11330000004021677 |11330000001177444 |Syllabus Quiz                            |0               |published      |        1|
 
 Quiz data is also separated into **quiz_dim** and **quiz_fact** tables.  We can merge those into a 
 single view using the following SQL statement.  This removes redundant columns in the **quiz_fact** 
@@ -287,16 +277,14 @@ ON id=quiz_id;
 ```
 
 
-Table: Partial Quiz Detail Table
-
-id                  course_id           assignment_id       quiz_type       points_possible   workflow_state    question_count  scoring_policy 
-------------------  ------------------  ------------------  --------------  ----------------  ---------------  ---------------  ---------------
-11330000001194941   11330000001220743   11330000004373592   graded_survey   5                 published                      1  keep_highest   
-11330000001189286   11330000001220743   11330000004334625   assignment      27                published                      8  keep_highest   
-11330000001198698   11330000001220743   NA                  survey          1                 published                      2  keep_highest   
-11330000001189278   11330000001220743   11330000004334617   assignment      36                published                     10  keep_highest   
-11330000001189282   11330000001220743   11330000004334621   assignment      25                published                     18  keep_highest   
-11330000001199129   11330000001220743   11330000004405781   assignment      0                 published                      0  keep_highest   
+|id                |course_id         |assignment_id |quiz_type     |points_possible |workflow_state | question_count|scoring_policy |
+|:-----------------|:-----------------|:-------------|:-------------|:---------------|:--------------|--------------:|:--------------|
+|11330000001176257 |11330000001206001 |NA            |practice_quiz |12              |published      |              8|keep_highest   |
+|11330000001176258 |11330000001206001 |NA            |practice_quiz |13              |published      |             11|keep_highest   |
+|11330000001176264 |11330000001206001 |NA            |practice_quiz |11              |published      |              2|keep_highest   |
+|11330000001176267 |11330000001206001 |NA            |practice_quiz |10              |published      |             10|keep_highest   |
+|11330000001176269 |11330000001206001 |NA            |practice_quiz |6               |published      |              6|keep_highest   |
+|11330000001176283 |11330000001206001 |NA            |practice_quiz |10              |published      |             10|keep_highest   |
 
 The quiz and assignment data can be joined on *assignment_id* on the quiz table and *id* on the assignment table, 
 but for flexiblity it is probably a good idea to keep these two tables separate tables in Immuta and 
